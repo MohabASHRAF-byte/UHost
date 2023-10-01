@@ -1,0 +1,120 @@
+#product-overview {
+  background-image: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url(images/freedom.jpg);
+  background-color: #ff1b68;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 528px;
+  padding: 0.1px;
+}
+
+#product-overview h1 {
+  margin: 20px;
+  position: relative;
+  top: 450px;
+  font-size: 25px;
+  color: white;
+  font-family: "Mooli", sans-serif;
+}
+
+.plans-main-div {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.plans-article {
+  background-color: #d5ffdc;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  padding: 16px;
+  margin: 8px;
+}
+
+.plans--highlighted {
+  background-color: #19b84c;
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plans__subtitle {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #19b84c;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.plans-article>ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+.plans-article li {
+  margin: 8px;
+}
+
+.plan-name,
+.plans--highlighted .plan-price {
+  color: #0e4f1f;
+}
+
+.plan-price {
+  color: #858585;
+}
+
+.plans--highlighted .plan-name {
+  color: white;
+}
+
+.section-title {
+  /* background-color: white; */
+  text-align: center;
+  color: #19b84c;
+  font-size: 30px;
+}
+
+#key-features {
+  background-color: #ff1b68;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+#key-features .section-title {
+  color: white;
+}
+
+.key-features_list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.key-features_element {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  vertical-align: top;
+
+  /* background-color: white; */
+}
+
+.key-features_description {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+.key-features-img {
+  padding: 20px;
+  height: 125px;
+  width: 125px;
+  border: black 1.5px solid;
+  border-radius: 50%;
+  margin: 0px auto;
+  background-color: white;
+}
