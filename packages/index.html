@@ -16,8 +16,14 @@
 </head>
 
 <body>
+  <div class="droplist"></div>
   <div class="background"></div>
   <header class="main-header">
+    <button class="toggle-button">
+      <span class="toggle-button__bar"></span>
+      <span class="toggle-button__bar"></span>
+      <span class="toggle-button__bar"></span>
+    </button>
     <a class="main-header_title" href="../index.html">
       <img src="../images/uhost-icon.png" alt="uHost">
     </a>
@@ -35,6 +41,19 @@
       </ul>
     </nav>
   </header>
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__items">
+      <li class="mobile-nav__item">
+        <a href="index.html">Packages</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="../Customers/index.html">Customers</a>
+      </li>
+      <li class="mobile-nav__item mobile-nav__item--cta">
+        <a href="index.html">Start Hosting</a>
+      </li>
+    </ul>
+  </nav>
   <main>
     <section>
       <a href="#">
@@ -92,6 +111,8 @@
       </ul>
     </nav>
   </footer>
+  <script src="../shared.js"></script>
+
 </body>
 
 </html>
