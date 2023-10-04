@@ -19,7 +19,7 @@ main {
   left: 0;
   z-index: 100;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -33,7 +33,7 @@ main {
   z-index: 1;
 }
 
-.main-header>div {
+.main-header > div {
   display: inline-block;
   vertical-align: middle;
 }
@@ -211,8 +211,15 @@ main {
   outline: none;
 }
 
+.button[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
+} 
+
 .open {
-  display: block !important;
+    display: block !important;
 }
 
 @media (min-width: 40rem) {

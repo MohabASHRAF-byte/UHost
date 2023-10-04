@@ -156,27 +156,16 @@
 } */
 
 .modal {
-  margin: auto;
   position: fixed;
   display: none;
   z-index: 200;
-  min-width: 12rem;
-  top: 30%;
-  left: 10%;
-  /* left: 30%; */
-  width: 80%;
+  top: 20%;
+  left: 30%;
+  width: 40%;
   background: white;
   padding: 1rem;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 40rem) and (min-height: 40rem) {
-  .modal {
-    width: 40%;
-    top: 30%;
-    left: 30%;
-  }
 }
 
 .modal__title {
