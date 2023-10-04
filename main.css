@@ -1,139 +1,159 @@
 #product-overview {
-  margin-top: 3.1rem;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url(images/freedom.jpg);
-  background-color: #ff1b68;
-  background-size: cover;
-  background-position: left 0% top 20%;
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("images/freedom.jpg") center/cover no-repeat border-box,
+    #ff1b68;
+  /* background-image: url("freedom.jpg");
+    background-size: cover;
+    background-position: left 10% bottom 20%; */
+  /* background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box; */
+  /* background-image: linear-gradient(180deg, red 70%, blue 60%, rgba(0,0,0,0.5)); */
+  /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
   width: 100vw;
   height: 33vh;
-  padding: 0.1px;
-
+  /* border: 5px dashed red; */
+  position: relative;
 }
 
-.product-overview__title {
-  margin: 1.25rem;
+#product-overview h1 {
+  color: white;
+  font-family: "Anton", sans-serif;
   position: absolute;
-  bottom: 3%;
+  bottom: 5%;
+  left: 3%;
   font-size: 1.6rem;
-  color: white;
-  font-family: "Mooli", sans-serif;
 }
 
-.plans-main-div {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
+@media (min-width: 40rem) and (min-height: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
 
-.plans-article {
-  background-color: #d5ffdc;
-  display: inline-block;
-  width: 30%;
-  text-align: center;
-  padding: 1rem;
-  margin: 0.5rem;
-}
-
-.plans--highlighted {
-  background-color: #19b84c;
-  color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.plans__subtitle {
-  background-color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  color: #19b84c;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
-}
-
-.plans-article>ul {
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-}
-
-.plans-article li {
-  margin: .5rem;
-}
-
-.plan-name,
-.plans--highlighted .plan-price {
-  color: #0e4f1f;
-}
-
-.plan-price {
-  color: #858585;
-}
-
-.plans--highlighted .plan-name {
-  color: white;
+  #product-overview h1 {
+    font-size: 3rem;
+  }
 }
 
 .section-title {
-  /* background-color: white; */
+  color: #2ddf5c;
   text-align: center;
+}
+
+.plan {
+  background: #d5ffdc;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.plan--highlighted {
+  background: #19b84c;
+  color: white;
+}
+
+.plan__annotation {
+  background: white;
   color: #19b84c;
-  font-size: 2rem;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__title {
+  color: white;
+}
+
+.plan--highlighted .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__feature {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem) {
+  .plan__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 
 #key-features {
-  background-color: #ff1b68;
-  padding: 1.25rem;
+  background: #ff1b68;
   margin-top: 5rem;
+  padding: 1rem;
 }
 
 #key-features .section-title {
   color: white;
+  margin: 2rem;
 }
 
-.key-features_list {
+.key-feature__list {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.key-features_element {
-  display: inline-block;
-  width: 30%;
-  margin: .65rem;
-  padding: .65rem;
-  vertical-align: top;
-
-  /* background-color: white; */
+.key-feature__image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  margin: auto;
+  padding: 1.5rem;
 }
 
-.key-features_description {
+.key-feature__description {
+  text-align: center;
   font-weight: bold;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
-.key-features-img {
-  padding: 1.25rem;
-  height: 7.9rem;
-  width: 7.9rem;
-  border: black 1.5px solid;
-  border-radius: 50%;
-  margin: 0px auto;
-  background-color: white;
+@media (min-width: 40rem) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
 }
 
-/*  */
-.droplist {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
+/* h1 {
+    font-family: sans-serif;
+} */
 
 .modal {
   position: fixed;

@@ -1,87 +1,45 @@
-var backdrop = document.querySelector('.droplist');
-var model = document.querySelector('.modal')
-var planButtons = document.querySelectorAll('.plans-article .button')
-var sideNavButt = document.querySelector('.toggle-button')
-var modelNoAnswer = document.querySelector('.modal__action--negative')
-var sideNav = document.querySelector('.mobile-nav')
+var backdrop = document.querySelector(".backdrop");
+var modal = document.querySelector(".modal");
+var modalNoButton = document.querySelector(".modal__action--negative");
+var selectPlanButtons = document.querySelectorAll(".plan button");
+var toggleButton = document.querySelector(".toggle-button");
+var mobileNav = document.querySelector(".mobile-nav");
 
-//
+// console.dir(backdrop.style['background-image']);
 
-// click side bar buttons  
-sideNavButt.addEventListener('click', function () {
-    backdrop.classList.add('open');
-    sideNav.classList.add('open');
-})
-// colsing the side bar
-backdrop.addEventListener('click', function () {
-    closeModel();
-    if (model) {
-        model.classList.remove('open')
-    }
+// console.dir(backdrop);
+for (var i = 0; i < selectPlanButtons.length; i++) {
+  selectPlanButtons[i].addEventListener("click", function() {
+    // modal.style.display = "block";
+    // backdrop.style.display = "block";
+    // modal.className = 'open'; // This will actually overwrite the complete class list
+    modal.classList.add("open");
+    backdrop.classList.add("open");
+  });
+}
+
+backdrop.addEventListener("click", function() {
+  // mobileNav.style.display = 'none';
+  mobileNav.classList.remove("open");
+  closeModal();
 });
-// closing confirm menu
-if (modelNoAnswer) {
-    modelNoAnswer.addEventListener('click', function () {
-        model.classList.remove('open')
-        closeModel()
-    })
+
+if (modalNoButton) {
+  modalNoButton.addEventListener("click", closeModal);
 }
 
-function closeModel() {
-    backdrop.classList.remove('open')
-    sideNav.classList.remove('open')
+function closeModal() {
+  //   backdrop.style.display = "none";
+  //   modal.style.display = "none";
+  if (modal) {
+    modal.classList.remove("open");
+  }
+  backdrop.classList.remove("open");
 }
 
-for (var i = 0; i < planButtons.length; i++) {
-    planButtons[i].addEventListener('click', function () {
-        // backdrop.style.display = 'block';
-        // model.style.display = 'block';
-        backdrop.classList.add('open');
-        model.classList.add('open');
-    })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+toggleButton.addEventListener("click", function() {
+  // mobileNav.style.display = 'block';
+  // backdrop.style.display = 'block';
+  mobileNav.classList.add("open");
+  backdrop.classList.add("open");
+});
